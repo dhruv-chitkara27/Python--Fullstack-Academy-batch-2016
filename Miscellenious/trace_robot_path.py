@@ -21,4 +21,28 @@ SAMPLE OUTPUT :
 
 """
 
+print("Enter the Coordinates")
+for i in range (4):
+    a=input("Enter the Movement: ").split()
+    b=int(a[1])
+         
+    if (a[0]=='UP'):
+        up=b
+    if (a[0]=='DOWN'):
+        down=b
+    if (a[0]=='LEFT'):
+        left=b
+    if (a[0]=='RIGHT'):
+        right=b
 
+if (up>down):
+    a=up-down
+else:
+    a=down-up
+if  (left>right):
+    b=left-right
+else:
+    b=right-left
+
+distance= (a*a+b*b)**0.5
+print(int(distance))
